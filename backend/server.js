@@ -25,7 +25,6 @@ app.use(
     cors({
         // origin: 'http://localhost:5173', // frontend link
         origin: 'https://skillacademyin.vercel.app', // frontend link
-        origin: "*",
         credentials: true
     })
 );
