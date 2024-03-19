@@ -3,7 +3,6 @@ import { Link, matchPath, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { NavbarLinks } from "../../../data/navbar-links";
-import StudyBuddyLogo from "../../assets/Logo/Logo-Full-Light.png";
 import { fetchCourseCategories } from "./../../services/operations/courseDetailsAPI";
 
 import ProfileDropDown from "../core/Auth/ProfileDropDown";
@@ -77,7 +76,6 @@ const Navbar = () => {
       <div className="flex w-11/12 max-w-maxContent items-center justify-between ">
         {/* logo */}
         <Link to="/">
-          {/* <img src={StudyBuddyLogo} width={160} height={42} loading='lazy' /> */}
           <div
             style={{
               fontFamily: "Varela Round, sans-serif",
