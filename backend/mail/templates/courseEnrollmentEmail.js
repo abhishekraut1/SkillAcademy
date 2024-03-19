@@ -79,7 +79,7 @@ exports.courseEnrollmentEmail = (courseName, name) => {
                 <a class="cta" href="https://studybuddyin.vercel.app/dashboard/enrolled-courses">Go to Dashboard</a>
             </div>
             <div class="support">If you have any questions or need assistance, please feel free to reach out to us at 
-            <a href="mailto:rautabhishek005@gmail.com">rautabhishek005@gmail.com</a>. We are here to help!</div>
+            <a href="mailto:abhishekgraut@gmail.com">abhishekgraut@gmail.com</a>. We are here to help!</div>
         </div>
     </body>
     
