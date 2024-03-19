@@ -3,7 +3,7 @@ import { Link, matchPath, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { NavbarLinks } from "../../../data/navbar-links";
-import SkillAcademyLogo from "../../assets/Logo/Logo-Full-Light.png";
+import StudyBuddyLogo from "../../assets/Logo/Logo-Full-Light.png";
 import { fetchCourseCategories } from "./../../services/operations/courseDetailsAPI";
 
 import ProfileDropDown from "../core/Auth/ProfileDropDown";
@@ -77,7 +77,7 @@ const Navbar = () => {
       <div className="flex w-11/12 max-w-maxContent items-center justify-between ">
         {/* logo */}
         <Link to="/">
-          {/* <img src={SkillAcademyLogo} width={160} height={42} loading='lazy' /> */}
+          {/* <img src={StudyBuddyLogo} width={160} height={42} loading='lazy' /> */}
           <div
             style={{
               fontFamily: "Varela Round, sans-serif",
@@ -86,7 +86,7 @@ const Navbar = () => {
               fontSize:"25px"
             }}
           >
-            SkillAcademy
+            StudyBuddy
           </div>
         </Link>
 
