@@ -30,7 +30,7 @@ exports.resetPasswordToken = async (req, res) => {
 
 
         // create url
-        const url = `https://skillacademyin.vercel.app/update-password/${token}`;
+        const url = `https://studybuddyin.vercel.app/update-password/${token}`;
 
         // send email containing url
         await mailSender(email, 'Password Reset Link', `Password Reset Link : ${url}`);

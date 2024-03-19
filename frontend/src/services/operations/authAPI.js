@@ -95,7 +95,7 @@ export function login(email, password, navigate) {
         password,
       })
 
-      console.log("LOGIN API RESPONSE............", response);
+      // console.log("LOGIN API RESPONSE............", response);
 
       if (!response.data.success) {
         throw new Error(response.data.message)
@@ -136,7 +136,7 @@ export function getPasswordResetToken(email, setEmailSent) {
         email,
       })
 
-      console.log("RESET PASS TOKEN RESPONSE............", response)
+      // console.log("RESET PASS TOKEN RESPONSE............", response)
 
       if (!response.data.success) {
         throw new Error(response.data.message)
@@ -168,7 +168,7 @@ export function resetPassword(password, confirmPassword, token, navigate) {
         token,
       })
 
-      console.log("RESETPASSWORD RESPONSE............", response)
+      // console.log("RESETPASSWORD RESPONSE............", response)
 
       if (!response.data.success) {
         throw new Error(response.data.message)

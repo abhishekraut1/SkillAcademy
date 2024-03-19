@@ -46,7 +46,7 @@ exports.sendOTP = async (req, res) => {
 
         // create an entry for otp in DB
         const otpBody = await OTP.create({ email, otp });
-        // console.log('otpBody - ', otpBody);
+        console.log('otpBody - ', otpBody);
 
 
 
@@ -106,31 +106,31 @@ exports.signup = async (req, res) => {
 
         // find most recent otp stored for user in DB
         /*** */
-        // const recentOtp = await OTP.findOne({ email }).sort({ createdAt: -1 }).limit(1);
+        const recentOtp = await OTP.findOne({ email }).sort({ createdAt: -1 }).limit(1)
         /*** */
         // console.log('recentOtp ', recentOtp)
 
-        // .sort({ createdAt: -1 }): 
+        .sort({ createdAt: -1 })
         // It's used to sort the results based on the createdAt field in descending order (-1 means descending). 
         // This way, the most recently created OTP will be returned first.
 
-        // .limit(1): It limits the number of documents returned to 1. 
+        .limit(1) //It limits the number of documents returned to 1. 
 
 
         // if otp not found
         // *****
-        // if (!recentOtp || recentOtp.length == 0) {
-        //     return res.status(400).json({
-        //         success: false,
-        //         message: 'Otp not found in DB, please try again'
-        //     });
-        // } else if (otp !== recentOtp.otp) {
-        //     // otp invalid
-        //     return res.status(400).json({
-        //         success: false,
-        //         message: 'Invalid Otp'
-        //     })
-        // }
+        if (!recentOtp || recentOtp.length == 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Otp not found in DB, please try again'
+            });
+        } else if (otp !== recentOtp.otp) {
+            // otp invalid
+            return res.status(400).json({
+                success: false,
+                message: 'Invalid Otp'
+            })
+        }
         //**** 
 
         // hash - secure passoword
